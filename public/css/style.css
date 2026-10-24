@@ -1,0 +1,107 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.game-navbar {
+    background-color: #e6f4f1;
+}
+
+body.page-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-content {
+    flex: 1;
+}
+
+body.page-layout:has(.game-page) {
+    background-color: #e6f4f1;
+}
+
+.score-page {
+    min-height: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #12a39e;
+}
+
+.score-card {
+    width: min(100%, 900px);
+    border-radius: 12px;
+}
+
+.score-table {
+    width: 100%;
+    margin-bottom: 0;
+    --bs-table-border-color: #000;
+}
+
+.score-table th,
+.score-table td {
+    text-align: center;
+}
+
+.game-page{
+    min-height: 100%;
+    text-align: center;
+}
+
+.game-page .btn{
+    height: 140px;
+    width: 140px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 1rem;
+}
+
+.game-page .btn-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-page .line-one,
+.game-page .line-two {
+    display: flex;
+}
+
+.game-page .red{
+    background-color: red;
+
+}
+
+.game-page .yellow{
+    background-color: yellow;
+}
+
+.game-page .green{
+    background-color: green;
+
+}
+
+.game-page .purple{
+    background-color: purple;
+}
+
+.game-page .flash{
+    background-color: white;
+}
+
+.game-page .userflash{
+    background-color: blue;
+}
+
+/* Footer */
+footer {
+    min-height: 10px;
+    background-color: #212529;
+    color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

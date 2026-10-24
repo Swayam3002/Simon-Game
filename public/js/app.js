@@ -53,7 +53,8 @@ function checkAns(idx) {
             setTimeout(levelUp,1000);
         }
    }else{
-    h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to start`;
+    h2.innerHTML = `Game Over! Your score was <b>${level - 1}</b> <br> Press any key to start`;
+    saveScore(level - 1);
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout( function(){
         document.querySelector("body").style.backgroundColor = "white";
@@ -62,6 +63,24 @@ function checkAns(idx) {
 
    }
    
+}
+
+async function saveScore(score) {
+    try {
+        const response = await fetch("/api/scores", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ score: score })
+        });
+
+        if (!response.ok) {
+            throw new Error("The score could not be saved.");
+        }
+    } catch (error) {
+        console.error("Error saving score:", error);
+    }
 }
 
 function btnPress() {
@@ -74,7 +93,7 @@ function btnPress() {
   checkAns(userSeq.length-1);
 }
 
-let allBtns = document.querySelectorAll(".btn");
+let allBtns = document.querySelectorAll(".game-page .btn");
 
 for(btn of allBtns){
     btn.addEventListener("click",btnPress);

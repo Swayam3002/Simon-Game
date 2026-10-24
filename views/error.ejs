@@ -1,0 +1,30 @@
+    <style>
+        body {
+            min-height: 100vh;
+            background-color: #080a0c;
+            color: #f8f9fa;
+        }
+
+        .error-frame {
+            border: 1px solid #252a2e;
+            background-color: #080a0c;
+        }
+
+        .theme-warning {
+            color: #ffcc00;
+            background-color: #422f00;
+            border-color: #d6a900;
+        }
+
+        .theme-warning .btn-close {
+            filter: invert(73%) sepia(95%) saturate(1212%) hue-rotate(2deg) brightness(105%) contrast(105%);
+        }
+    </style>
+    <main class="container py-4">
+        <div class="error-frame rounded-4 p-4">
+            <div class="alert alert-warning alert-dismissible fade show theme-warning mb-0" role="alert">
+                <p class="mb-0"><strong><%= errorCode %></strong> — <%= message %></p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </main>
