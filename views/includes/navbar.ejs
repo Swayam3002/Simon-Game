@@ -7,6 +7,11 @@
             <li class="nav-item">
                 <a class="btn btn-secondary" href="/scores">Scores</a>
             </li>
+            <% if (typeof showLoginLink !== "undefined" && showLoginLink) { %>
+            <li class="nav-item">
+                <a class="btn btn-secondary" href="/login">Login</a>
+            </li>
+            <% } %>
         </ul>
     </div>
 </nav>

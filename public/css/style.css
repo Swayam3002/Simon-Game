@@ -20,6 +20,33 @@ body.page-layout:has(.game-page) {
     background-color: #e6f4f1;
 }
 
+.page-content:has(.login-page) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6f4f1;
+}
+
+.login-page {
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.login-form-container {
+    width: min(100%, 420px);
+    margin: 0 auto;
+}
+
+.login-input {
+    background-color: #e6f4f1;
+    border-color: #707371;
+}
+
+.login-input::placeholder {
+    color: #000;
+    opacity: 1;
+}
+
 .score-page {
     min-height: 100%;
     padding: 2rem 1rem;

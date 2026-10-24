@@ -24,7 +24,14 @@ mongoose.connect("mongodb://127.0.0.1:27017/simon_game")
 
 app.get("/", (req, res) => {
   res.render("index", {
-    title: "Simon Says Game"
+    title: "Simon Says Game",
+    showLoginLink: true
+  });
+});
+
+app.get("/login", (req, res) => {
+  res.render("users/login", {
+    title: "Login"
   });
 });
 
